@@ -4,7 +4,7 @@
 <!doctype html>
 <html lang="pt-br">
 	<head>
-		<title>Title</title>
+		<title>Carrinho</title>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +35,7 @@
 						<a class="nav-link" href="index.php">Início</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Carrinho</a>
+						<a class="nav-link" href="#">Carrinho <span class="badge badge-pill badge-success"><?php echo count($_SESSION['codproduto']); ?></span></a>
 					</li>
 				</ul>
 			</div>
@@ -71,7 +71,7 @@
 						<tfoot>
 							<tr>
 								<th colspan='3'><h4><strong>Total: R$ <?php echo number_format($total, 2, ',', ' '); ?></strong></h4></th>
-								<th><a href="?acao=limpar" class='btn btn-danger'>Limpar Carrinho</a></th>
+								<th><a href="?acao=limpar" class='btn btn-danger <?php echo count($_SESSION['codproduto']) <= 0 ? 'disabled' : null; ?>'>Limpar Carrinho</a></th>
 							</tr>
 						</tfoot>
 					</table>
