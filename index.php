@@ -39,7 +39,7 @@
 						<a class="nav-link" href="index.php">Início</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="carrinho.php">Carrinho</a>
+						<a class="nav-link" href="carrinho.php">Carrinho <span class="badge badge-pill badge-success"><?php echo count($_SESSION['codproduto']); ?></span></a>
 					</li>
 				</ul>
 			</div>
